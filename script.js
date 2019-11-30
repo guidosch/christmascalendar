@@ -108,8 +108,18 @@ function resetCookie(){
     Cookies.set(COOKIE_NAME, JSON.stringify([]), { expires: 50 });
 }
 
+function setTitle(){
+    var intro = $(".intro").text();
+    var query = location.search;
+    if (query.length > 0){
+        intro = intro + decodeURIComponent(query.split("?")[1]);
+    }
+    $(".intro").text(intro);
+}
+
 $(document).ready(function () {
     buildUI();
     registerClickAction();
     hideClickedDays();
+    setTitle();
 });
