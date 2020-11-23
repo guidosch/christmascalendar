@@ -1,4 +1,8 @@
-.day{
+ html {
+    background-color: rgba(245, 199, 71, 0.651);
+}
+
+.day {
     border: 1px;
     border-style: solid;    
     border-color: black;
@@ -12,6 +16,7 @@
     font-family: 'Pacifico', cursive;
     color:firebrick;
     text-decoration: none;
+    background-color: rgba(245, 199, 71, 0.651);
 }
 
 .songFrame {
@@ -20,15 +25,59 @@
     float: left;
 }
 
-.reset {
+.songContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 100%;
+    height: 100%;    
+    padding-top: 100px;
+    display: none;
+}
+
+.songFloat {
+    margin: 0 auto;
+    background-color: #FFF;
+    color: #000;
+    width: 300px;
+    height: auto;
+    padding: 5px;
+    border: solid 1px #999;
+    -webkit-border-radius: 3px;
+    -webkit-box-orient: vertical;
+    -webkit-transition: 200ms -webkit-transform;
+    box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.15);
+    display: block;
+}
+
+.closeButton {
+    margin: 0 auto;
+    background-color: #FFF;
+    font-family: 'Pacifico', cursive;
+    color:firebrick;
+    font-weight: bold;
+    border: none;
+    width: auto; 
+    float: right;
+    clear: both;
+    cursor: pointer; 
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     font-size: 0.8em;
     font-family: 'Pacifico', cursive;
     color:firebrick;
+    bottom: 10px;
+    text-align: center;
 }
 
 .intro {
     font-size: 2em;
     font-family: 'Pacifico', cursive;
     color:firebrick;
-    text-align: center
+    text-align: center;
 }

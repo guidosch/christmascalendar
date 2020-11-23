@@ -64,16 +64,20 @@ function buildUI() {
     }
 }
 
-function registerClickAction() {
+function registerClickActions() {
     $(".songLink").click(function (event) {
         var id = event.currentTarget.id;
         setCookie(id);
         setImage(id);
         playSong(id);
     });
+    $(".closeButton").click(function (event) {
+        $("#songContainer").hide();
+    });
 }
 
 function playSong(id) {
+    $("#songContainer").show();
     var songNumber = parseInt(id.split("-")[1]);
     console.log("playing song #: " + songNumber);
     $("#songFrame").attr("src", songs[--songNumber])
@@ -110,6 +114,6 @@ function resetCookie(){
 
 $(document).ready(function () {
     buildUI();
-    registerClickAction();
+    registerClickActions();
     hideClickedDays();
 });
