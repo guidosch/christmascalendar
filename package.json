@@ -1,0 +1,26 @@
+{
+  "name": "christmascalendar",
+  "version": "1.0.0",
+  "description": "Simple christmas calender with a song for every day in Dezember",
+  "main": "calendar.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guidosch/christmascalendar.git"
+  },
+  "keywords": [
+    "christmas",
+    "calendar"
+  ],
+  "author": "Guido Schnider",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guidosch/christmascalendar/issues"
+  },
+  "homepage": "https://github.com/guidosch/christmascalendar#readme",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}
