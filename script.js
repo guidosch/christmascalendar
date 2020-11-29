@@ -7,13 +7,6 @@
  */
 
 
-
-
-
-
-
-
-
 var images = [
     "bell-icon.png",
     "candles-icon.png",
@@ -96,8 +89,10 @@ function setTitle() {
     const list = params.get('list');
     const name = params.get('name');
     var intro = $(".intro").text();
-    if (name.length > 0) {
+    if (name && name.length > 0) {
         intro = intro + decodeURIComponent(name);
+    } else {
+        console.log("No name= query attribute found. Personalize via name for the recipient.");
     }
     $(".intro").text(intro);
 
@@ -106,9 +101,13 @@ function setTitle() {
 function loadSongs() {
     const params = new URL(location.href).searchParams;
     const list = params.get('list');
-    let script = document.createElement('script');
-    script.src = list + ".js";
-    document.head.append(script);
+    if (name){
+        let script = document.createElement('script');
+        script.src = list + ".js";
+        document.head.append(script);
+    } else {
+        alert("no song list specified! Set list=xy query param.");
+    }
 }
 
 $(document).ready(function () {
