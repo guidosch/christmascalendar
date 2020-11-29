@@ -18,16 +18,19 @@
 
 <body>
   <script src="script.js"></script>
-  <div><h1 class="intro">Adventskalender mit Spotify Song Überraschung</h1></div>
-  <div id="calendar" class="calendar"></div>
-  
-  <div class="songContainer" id="songContainer">
-    <div class="songFloat">
-      <input type="button" id="closeButton" class="closeButton" value="close" />
-      <iframe id="songFrame"  src="" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+  <div id="page-container">
+    <div id="content-wrap">
+      <div><h1 class="intro">Adventskalender mit Spotify Song Überraschung</h1></div>
+      <div id="calendar" class="calendar"></div>
+      
+      <div class="songContainer" id="songContainer">
+        <div class="songFloat">
+          <input type="button" id="closeButton" class="closeButton" value="close" />
+          <iframe id="songFrame"  src="" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+      </div>
+    <div class="footer">© <a href="https://github.com/guidosch/christmascalendar" target="_blanc">2020</a> - Guido Schnider - click <a onClick="resetCookie()" href="">here</a> to start over</div>
     </div>
   </div>
-  
-  <div class="footer">© <a href="https://github.com/guidosch/christmascalendar" target="_blanc">2020</a> - Guido Schnider - click <a onClick="resetCookie()" href="">here</a> to start over</div>
 </body>
 </html>

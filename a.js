@@ -1,0 +1,30 @@
+ /**
+  * Songs Annette 2020
+  */
+songs =
+[
+    "https://open.spotify.com/embed/track/5XxcwLvZXDLGbwBK4G0ovH",
+    "https://open.spotify.com/embed/track/5PLIS2xA9l1eCY6VmXvnI9",
+    "https://open.spotify.com/embed/track/2h8cQH7zhUWrynZi2MKhhC",
+    "https://open.spotify.com/embed/track/49fAoOgnneg6YRuVCzn1kP",
+    "https://open.spotify.com/embed/track/5ld9arEKsxvJr7RqoWd337",
+    "https://open.spotify.com/embed/track/4ClHOBQG9QNcqzfzFmXj39",
+    "https://open.spotify.com/embed/track/7wbozFLc9AaQmC9dSAcCdQ",
+    "https://open.spotify.com/embed/track/11fEJnYg66OiKzN4XPtooK",
+    "https://open.spotify.com/embed/track/3fWIHOcoadHKEjvCpbKX5j",
+    "https://open.spotify.com/embed/track/1JtPOYZId9DTeAvzjNK2vi",
+    "https://open.spotify.com/embed/track/1kE43XSHxiDcnYQ6AUUQc4",
+    "https://open.spotify.com/embed/track/5IeoUwHASkdArS7VivoEvc",
+    "https://open.spotify.com/embed/track/7AzdDendW4LKEhxULqj0VU",
+    "https://open.spotify.com/embed/track/5q0gPpBVNNusEenuXo3hw3",
+    "https://open.spotify.com/embed/track/41Guegd93PvYZYwSGiiDav",
+    "https://open.spotify.com/embed/track/6e5p0KjHW6UKwNXrizkMt2",
+    "https://open.spotify.com/embed/track/50mijthH8crF7XahxaODRH",
+    "https://open.spotify.com/embed/track/5scHfs6nM7brzXpe2biwqP",
+    "https://open.spotify.com/embed/track/4vdV2Eua6RkUoUM51jdH56",
+    "https://open.spotify.com/embed/track/3Uh7rAb7F0XGVpEEDwfH1k",
+    "https://open.spotify.com/embed/track/2gqCvq1hPhrMFypbBavGBJ",
+    "https://open.spotify.com/embed/track/2qVc3mVAW2MCsVzTC5rKaq",
+    "https://open.spotify.com/embed/track/4fstd3tMdr7kNE3QJcKo8j",
+    "https://open.spotify.com/embed/track/2qwCEyONpUI3ut1mKsOi04"
+];

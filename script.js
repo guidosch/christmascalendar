@@ -3,50 +3,29 @@
  * Replace each song link with one of your favorites and send to your friends!
  * Hint: Use the embed link as it gets displayed in a small area inside the page.
  * Use the Spotify desktop app and the share feature to geht the song links.
+ * e.g. "https://open.spotify.com/embed/track/76pypmPEnNfWhtuLDQH7dk?si=0sSINqCLRx-wE3dh3lugVA",
  */
 
-songs =
-[
-"https://open.spotify.com/embed/track/4hkL4pzAuVtpS70FzS1i5i?si=GPM3TIucTEapQA5EfS5JPg",
-"https://open.spotify.com/embed/track/76pypmPEnNfWhtuLDQH7dk?si=0sSINqCLRx-wE3dh3lugVA",
-"https://open.spotify.com/embed/track/2Xb1md4kHUzZpnUTZ4fYC4?si=s6KP6iHCRMGOF7qOBireGg",
-"https://open.spotify.com/embed/track/0iFEdVpsCi89Wd3UjlmdMH?si=v5U18UFjR_WLSKKvrwDz7A",
-"https://open.spotify.com/embed/track/3ejU8JMenktibKkNz9dPBL?si=91LyYq-nSTOnwspOB3pwIQ",
-"https://open.spotify.com/embed/track/57DfOHOZvC7Yrk8vnG9DzM?si=XIfPebTFRraL7qHnaiNxtQ",
-"https://open.spotify.com/embed/track/4sb1gQICYmaLMulCaEAtUo?si=ZoA7qDq8Q6euPHH0GYWf8Q",
-"https://open.spotify.com/embed/track/4b1dW0Msi3ksTI3ZvFURfQ?si=RxmVx2GxQ2mBZ4OyC1xgJw",
-"https://open.spotify.com/embed/track/5CkXCkzvAbmX6JnbaDaJvd?si=sOcYdO9nSaWRQdUA1xJTrQ",
-"https://open.spotify.com/embed/track/4NxrqviMDGuKa0jmVNlVrE?si=JuyewQw1SRKQX3ELZ8VFwA",
-"https://open.spotify.com/embed/track/7eqj2U3xVj38OtdMHpN0zw?si=swHGIamDRZqzHHugQUFNaw",
-"https://open.spotify.com/embed/track/7vZ8buWHZViuzjiGc20cY0?si=G4rZOsIyTiu4UgN_QmYoXA",
-"https://open.spotify.com/embed/track/3rRdokhE8UQS4yjun5h3iK?si=IPMEq8UNSjeFbKWhKdJGbw",
-"https://open.spotify.com/embed/track/3AO4JN8iEAuxwclIh2qZdN?si=uBFr_kjVRom0sej5njipjA",
-"https://open.spotify.com/embed/track/22SNmmSMXIrADD6ahmsj0N?si=Rt-O2wdLS1-_PxsMcsUlhA",
-"https://open.spotify.com/embed/track/3RJeEv9n8dP55yeHucEMxB?si=GyxW9Z2eQW-z9YllMCPDfQ",
-"https://open.spotify.com/embed/track/4oLAFHhUbUpW6Z8Ux1CPEp?si=-k7fqB3gQVG-gZ36hKPnNQ",
-"https://open.spotify.com/embed/track/3R1abI6qZDg9d3CI4oLDnf?si=gGEHBVILT9KX2DybX2UXfA",
-"https://open.spotify.com/embed/track/3HNDHljCQQiWIpagsFlpVK?si=k6jTO6duRVWoTh3wfAyTDg",
-"https://open.spotify.com/embed/track/3lIVaQHnr0s5g0aCeEcc1F?si=n0yfP6DAR7Cm7GCn4HFVew",
-"https://open.spotify.com/embed/track/5hrGOS8UP9brY2JizYc5z5?si=g7w-CSWDQJO461FVuVnl9w",
-"https://open.spotify.com/embed/track/0NLyAAIk319L0VKYrRgnoW?si=-KALZbuRSgqTyDK2YmMJhg",
-"https://open.spotify.com/embed/track/2hZt68H0qMekKFx30gzJzH?si=EkxcCaDqSDSdiDomvXi7BA",
-"https://open.spotify.com/embed/track/4EHeYOIcQWpxwMgfUZs7HC?si=5PRqgks7RN2zdatoYpd4mA"
-];
 
-    
-    
-    var images = [
-        "bell-icon.png",
-        "candles-icon.png",
-        "candykane-icon.png",
-        "christmass-ball-icon.png",
-        "deer-icon.png",
-        "gift-icon.png",
-        "hat-icon.png",
-        "misletoe-icon.png",
-        "snowflake-icon.png",
-        "sock-icon.png"
-    ];
+
+
+
+
+
+
+
+var images = [
+    "bell-icon.png",
+    "candles-icon.png",
+    "candykane-icon.png",
+    "christmass-ball-icon.png",
+    "deer-icon.png",
+    "gift-icon.png",
+    "hat-icon.png",
+    "misletoe-icon.png",
+    "snowflake-icon.png",
+    "sock-icon.png"
+];
 
 const COOKIE_NAME = "days-clicked";
 
@@ -108,17 +87,28 @@ function hideClickedDays() {
     }
 }
 
-function resetCookie(){
+function resetCookie() {
     Cookies.set(COOKIE_NAME, JSON.stringify([]), { expires: 50 });
 }
 
-function setTitle(){
+function setTitle() {
+    const params = new URL(location.href).searchParams;
+    const list = params.get('list');
+    const name = params.get('name');
     var intro = $(".intro").text();
-    var query = location.search;
-    if (query.length > 0){
-        intro = intro + decodeURIComponent(query.split("?")[1]);
+    if (name.length > 0) {
+        intro = intro + decodeURIComponent(name);
     }
     $(".intro").text(intro);
+
+}
+
+function loadSongs() {
+    const params = new URL(location.href).searchParams;
+    const list = params.get('list');
+    let script = document.createElement('script');
+    script.src = list + ".js";
+    document.head.append(script);
 }
 
 $(document).ready(function () {
@@ -126,4 +116,5 @@ $(document).ready(function () {
     registerClickActions();
     hideClickedDays();
     setTitle();
+    loadSongs();
 });
