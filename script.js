@@ -101,7 +101,7 @@ function setTitle() {
 function loadSongs() {
     const params = new URL(location.href).searchParams;
     const list = params.get('list');
-    if (name){
+    if (list){
         let script = document.createElement('script');
         script.src = list + ".js";
         document.head.append(script);
